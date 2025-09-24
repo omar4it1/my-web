@@ -1,0 +1,13 @@
+ .main {
+color: rgb(97, 124, 18); 
+font-size: large; 
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.detail{
+    color: blueviolet;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#name{
+    background-color: #ccc;
+}
