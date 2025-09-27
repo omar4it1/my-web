@@ -5,7 +5,12 @@
 
 }
 
-.search-bar {
-    font-size: 20px;
 
+.search-bar {
+    
+    font-size: 20px;
+    color: blue;
+    border-color: #010599;
+    border-style: dotted;
+    
 }
