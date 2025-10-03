@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .content{
+            width: 70em;
+            margin-left: 15em;
+        }
+        body{
+            font-family: Pangea,Arial,sans-serif;
+            
+        }
+        .main_heading{
+            color: #002186;
+        }
+        .detail{
+            margin-left: 8em;
+        }
+        .strong_text{
+            font-size: 16px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+<div class="content" id="content">
+
+</div>
+
+<script>
+   
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+    let resObj = JSON.parse(this.responseText);
+
+     let contents = document.getElementById("content");
+    console.log(contents);
+
+    let mainHeading = document.createElement("h1");
+    mainHeading.classList.add("main_heading");
+    mainHeading.innerHTML = resObj.main;
+
+    let detail = document.createElement("div");
+    detail.classList.add("detail");
+    detail.appendChild(mainHeading);
+    contents.appendChild(detail);
+
+    let author = document.createElement("div");
+    author.classList.add("detail", "strong_text");
+    author.innerHTML = resObj.author
+   
+    contents.appendChild(author);
+
+    }
+  xhttp.open("GET", "http://localhost:8080/news", true);
+  xhttp.send();
+
+</script>
+</body>
+</html>
